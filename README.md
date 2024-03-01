@@ -6,6 +6,8 @@
  5. Использовать RabbitMQ в docker командой <code>docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq</code>
  6. В той же директории запустить Celery <code>celery -A mailingstat worker -l info</code>
 
+Администраторский UI по адресу admin/
+
 ## Документация по API (так же есть swagger по адресу docs/):
 ### Приложение client
 <code>POST /api/v1/client/add</code>

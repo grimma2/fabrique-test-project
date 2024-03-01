@@ -82,6 +82,7 @@ class MailingProcesser(ExponentialBackoff):
                 logging.getLogger('messagesLogger').info('stop mailing because mailing has end')
                 if not self.future.done():
                     self.future.set_result(None)
+                    return
 
             client_tz = pytz.timezone(queue_message['timezone'])
             now_local = now().astimezone(client_tz)
